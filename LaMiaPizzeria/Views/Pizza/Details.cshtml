@@ -1,4 +1,5 @@
-﻿@model List<Pizza>
+﻿@using csharp_ef_pizze;
+@model Pizza
 
 <div class="container">
     <div class="row">
@@ -7,7 +8,7 @@
                 <h1 class="mt-3 mb-3">Dettagli Pizza</h1>
             </div>
             <div class="post-single-image-container">
-                <img src="@Model.Image" alt="Immagine @Model.Title">
+                <img height="250" width="300" src="@Model.Image" alt="Immagine @Model.Title">
             </div>
             <p>
                 <strong>Titolo:</strong>
@@ -17,6 +18,11 @@
                 <strong>Contenuto:</strong>
                 @Model.Description
             </p>
+
+            <strong>Prezzo:</strong>
+            @Model.Price <span>Euro</span>
+            </p>
+
         </div>
     </div>
 </div>

@@ -1,9 +1,10 @@
-﻿@model List<Pizza>
+﻿@using csharp_ef_pizze;
+@model List<Pizza>
 
 <div class="container mt-5">
     <div class="row">
         <div class="col-12">
-            <h3>Lista delle pizze</h3>
+            <h1>La mia pizzeria</h1>
         </div>
     </div>
     <div class="row my-3">
@@ -11,27 +12,18 @@
 
             <table class="table table-striped">
                 <thead>
-                    <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Image</th>
-                    </tr>
+                    <h3>Lista pizze:</h3>
                 </thead>
                 <tbody>
                     @foreach (Pizza pizza in Model)
                     {
                         <a href="@Url.Action("Details", "Pizza", new {id = pizza.Id})">
                         <tr>
-                            <th scope="row">@article.Id</th>
-                            <td><img class="img-fluid img_square" src="@pizza.Image" alt="Immagine @pizza.Title"></td>
-                            <td>@pizza.Title</td>
+                            <td><img height="250" width="300" class="img-fluid img_square" src="@pizza.Image" alt="Immagine @pizza.Title"></td>
                             <td>
-                                    @pizza.Description
-                            </td>
-                            <td>
-                                <a class="btn btn-info btn-sm" href="@Url.Action("Details", "Pizza", new { id = article.Id })">
+                                @pizza.Title
+
+                                <a class="btn btn-info btn-sm" href="@Url.Action("Details", "Pizza", new { id = pizza.Id })">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
                                 </a>
                             </td>
