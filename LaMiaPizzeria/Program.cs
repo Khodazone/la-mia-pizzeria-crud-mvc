@@ -3,12 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using LaMiaPizzeria.Areas.Identity.Data;
 using csharp_ef_pizze;
 var builder = WebApplication.CreateBuilder(args);
-var connectionString = builder.Configuration.GetConnectionString("PizzaContextConnection") ?? throw new InvalidOperationException("Connection string 'PizzaContextConnection' not found.");
 
-builder.Services.AddDbContext<ProfileContext>();
+builder.Services.AddDbContext<PizzaContext>();
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<ProfileContext>();
+    .AddEntityFrameworkStores<PizzaContext>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
