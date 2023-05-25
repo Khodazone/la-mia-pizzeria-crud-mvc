@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Composition;
+using LaMiaPizzeria.Models;
 
 namespace csharp_ef_pizze
 {
@@ -18,5 +20,6 @@ namespace csharp_ef_pizze
         }
 
         public DbSet<Pizza> Pizza { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }
