@@ -139,5 +139,12 @@ namespace LaMiaPizzeria.Controllers
             }
         }
 
+        [HttpGet]
+        public IActionResult Create()
+        {
+
+        }
+
     }
 }
+
