@@ -1,4 +1,4 @@
-﻿namespace LaMiaPizzeria.Views.Pizza
+﻿/*namespace LaMiaPizzeria.Views.Pizza
 {
     public class CategoryFormModel
     {
@@ -6,3 +6,4 @@
         public List<Category>? Categories { get; set; }
     }
 }
+*/
